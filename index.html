@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Неаполитанска пица во Скопје. Печена во фурна. Свежо тесто, квалитетни состојки. Hristo Tatarchev 47f, Skopje. Neapolitan pizza in Skopje.">
+    <title>15 za 12 - Неаполитанска пица во Скопје | Neapolitan Pizza Skopje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="site-header">
+        <a href="#" class="logo-link" aria-label="Scroll to top">
+            <img src="logo.jpg" alt="15 za 12" class="header-logo">
+        </a>
+    </header>
+
+    <!-- Instagram & Language Toggle -->
+    <div class="lang-toggle-container">
+        <a href="https://www.instagram.com/15.za.12/" class="instagram-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+            <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </span>
+            <span>Instagram</span>
+        </a>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+            <span class="lang-option active" data-lang="mk">MK</span>
+            <span class="lang-separator">|</span>
+            <span class="lang-option" data-lang="en">EN</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&h=800&fit=crop" alt="Neapolitan pizza in wood-fired oven" loading="eager">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-headline" data-i18n="hero.headline">Неаполитанска пица. Печена во фурна.</h1>
+            <p class="hero-subtext" data-i18n="hero.subtext">Свежо тесто, квалитетни состојки</p>
+            <div class="hero-cta">
+                <a href="tel:+38971616500" class="btn btn-primary">
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n="cta.call">Повикај сега</span>
+                </a>
+                <a href="https://korpa.mk/partner/15-za-12" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Order online via Korpa">
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n="cta.korpa">Нарачај на Korpa</span>
+                </a>
+                <a href="https://wolt.com/en/mkd/skopje/restaurant/15-za-12" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Order online via Wolt">
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 3h5v5"></path>
+                            <path d="M8 3H3v5"></path>
+                            <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.828L4 3"></path>
+                            <path d="M12 22v-8.3a4 4 0 0 1 1.172-2.828L20 3"></path>
+                        </svg>
+                    </span>
+                    <span data-i18n="cta.wolt">Нарачај на Wolt</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 data-i18n="menu.title">Мени и цени</h2>
+            
+            <div class="menu-category">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.pizzas.creations">ПИЦИ — Наши креации</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="true">−</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.truffle">Тартуфата</span>
+                                <span class="item-price">670 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.truffle">Крем од тартуфи, пршута, печурки, моцарела</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.creamy-bacon">Крими бејкон</span>
+                                <span class="item-price">520 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.creamy-bacon">Бел сос, гауда, сланина, домат, чедар</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.cheesy-beef">Чизи биф</span>
+                                <span class="item-price">540 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.cheesy-beef">Бел сос, гауда, чедар, телешко месо, кромид, кисели краставички</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.mortadella-pistachio">Мортадела пистацио</span>
+                                <span class="item-price">530 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.mortadella-pistachio">Бел сос, моцарела, мортадела, песто, ф'стаци</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.sicilian">Сицилија</span>
+                                <span class="item-price">520 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.sicilian">Доматен сос, гауда, чаден колбас, моцарела</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.parmesan-cream">Крем пармиџано</span>
+                                <span class="item-price">520 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.parmesan-cream">Крем од пармезан, моцарела, босилек</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.sweet-savory-prosciutto">Слатко-солена пршута</span>
+                                <span class="item-price">600 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.sweet-savory-prosciutto">Бел сос, бри, моцарела, пршута, мед, ореви</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.macedonian">Македонка</span>
+                                <span class="item-price">510 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.macedonian">Рикота крем, сланина, лута пиперка, домат</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-default="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.pizzas.classics">ПИЦИ — Класици</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.margherita">Маргарита</span>
+                                <span class="item-price">420 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.margherita">Доматен сос, моцарела, босилек</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.pepperoni">Пеперони</span>
+                                <span class="item-price">480 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.pepperoni">Доматен сос, моцарела, пеперони</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.capri">Капри</span>
+                                <span class="item-price">430 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.capri">Доматен сос, гауда, шунка, печурки</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.quattro-formaggi">Кватро формаџи</span>
+                                <span class="item-price">480 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.quattro-formaggi">Бел сос, моцарела, гауда, горгонзола, пармезан</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.pomodoro">Помодоро</span>
+                                <span class="item-price">450 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.pomodoro">Доматен сос, моцарела, босилек</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.vegetarian">Вегетеријана</span>
+                                <span class="item-price">460 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.vegetarian">Доматен сос, печурки, маслинки, моцарела</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.piccante">Пиканте</span>
+                                <span class="item-price">500 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.piccante">Доматен сос, кулен, моцарела, чили</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.sandwiches">СЕНДВИЧИ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.cheddar-bacon">Чедар бејкон</span>
+                                <span class="item-price">340 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.cheddar-bacon">Сланина, чедар, гауда, домат</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.prosciutto">Пршуто</span>
+                                <span class="item-price">360 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.prosciutto">Пршута, моцарела, домат</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.cheesy-beef-sandwich">Чизи биф</span>
+                                <span class="item-price">380 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.cheesy-beef-sandwich">Телешко месо, чедар, кисели краставички</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.mortadella-sandwich">Мортадела</span>
+                                <span class="item-price">340 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.mortadella-sandwich">Мортадела, моцарела, рукола</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.caprese">Caprese</span>
+                                <span class="item-price">340 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.caprese">Моцарела, домат, босилек</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.veggie">Веге</span>
+                                <span class="item-price">330 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.veggie">Тиквичка, моцарела, песто</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.calzone">КАЛЦОНЕ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.capri-calzone">Капри</span>
+                                <span class="item-price">360 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.capri-calzone">Доматен сос, моцарела, шунка, печурки</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.pepperoni-calzone">Пеперони</span>
+                                <span class="item-price">390 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.pepperoni-calzone">Доматен сос, моцарела, пеперони</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.mortadella-calzone">Мортадела</span>
+                                <span class="item-price">380 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.mortadella-calzone">Бел сос, моцарела, мортадела</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.margherita-calzone">Маргарита</span>
+                                <span class="item-price">340 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.margherita-calzone">Доматен сос, моцарела</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.shareables">ЗА ДЕЛЕЊЕ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.prosciutto-piadina">Пијадине пршуто</span>
+                                <span class="item-price">590 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.prosciutto-piadina">Домат, моцарела, пршута</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.mortadella-piadina">Пијадине мортадела</span>
+                                <span class="item-price">560 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.mortadella-piadina">Домат, моцарела, мортадела</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.garlic-fries">Помфрит со лукче</span>
+                                <span class="item-price">240 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.garlic-fries">Помфрит, лук, зачини</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.salads">САЛАТИ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.tricolore-salad">Три колори</span>
+                                <span class="item-price">260 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.tricolore-salad">Рукола, моцарела, пармезан</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.crudo-blue-salad">Крудо блу</span>
+                                <span class="item-price">300 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.crudo-blue-salad">Микс салата, блу сирење, ореви</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.bacon-salad">Бејкон салата</span>
+                                <span class="item-price">280 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.bacon-salad">Микс салата, сланина, домат</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.desserts">ДЕСЕРТИ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.chocolate-brownie">Брауни чоколада</span>
+                                <span class="item-price">120 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.chocolate-brownie">Чоколаден брауни</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <span class="item-name" data-i18n="menu.item.jaffa-brownie">Брауни јафа</span>
+                                <span class="item-price">120 МКД</span>
+                            </div>
+                            <div class="menu-ingredients" data-i18n="ingredients.jaffa-brownie">Чоколаден брауни со јафа</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category" data-collapse-mobile="true">
+                <h3 class="menu-category-header">
+                    <span data-i18n="menu.extras">ЕКСТРИ</span>
+                    <button class="menu-toggle" aria-label="Toggle menu category" aria-expanded="false">+</button>
+                </h3>
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.tomato-sauce">Доматен сос</span>
+                            <span class="item-price">30 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.arugula">Рукола</span>
+                            <span class="item-price">30 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.chili-pepper">Чили пиперка</span>
+                            <span class="item-price">30 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.cayenne-pepper-sauce">Кајен пепер сос</span>
+                            <span class="item-price">40 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.kalamata-pesto">Каламата во песто</span>
+                            <span class="item-price">40 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.mushrooms">Шампињони</span>
+                            <span class="item-price">30 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.grana-padano">Грана падано</span>
+                            <span class="item-price">50 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.olives">Маслинка</span>
+                            <span class="item-price">40 МКД</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-item">
+                            <span class="item-name" data-i18n="menu.item.prosciutto-extra">Пршута (extra)</span>
+                            <span class="item-price">90 МКД</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="menu-note" data-i18n="menu.note">Цените може да варираат.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 data-i18n="about.title">За 15 za 12</h2>
+            <div class="about-content">
+                <p data-i18n="about.intro">Во потрага по совршената пица. Блиску сме.</p>
+                <p data-i18n="about.text1">Сервираме автентична неаполитанска пица, печена во нашата фурна на дрва. Лоцирани во срцето на Скопје, користиме свежо тесто и квалитетни состојки за да ви донесеме вистинскиот вкус на Неапол.</p>
+                <p data-i18n="about.text2">Ова е локално скопско место, не синџир. Се фокусираме на она што е важно: добра пица, направена на традиционален начин.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 data-i18n="gallery.title">Галерија</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Neapolitan pizza" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Wood-fired oven" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop" alt="Pizza preparation" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&h=300&fit=crop" alt="Pizza slice" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pizza margherita" loading="lazy">
+                </div>
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Restaurant interior" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" src="" alt="">
+        <button class="lightbox-prev">‹</button>
+        <button class="lightbox-next">›</button>
+    </div>
+
+    <!-- Location & Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 data-i18n="contact.title">Локација и контакт</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3 data-i18n="contact.address.label">Адреса</h3>
+                        <p data-i18n="contact.address.text">Христо Татарчев 47ф, Скопје, Македонија</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 data-i18n="contact.phone.label">Телефон</h3>
+                        <p><a href="tel:+38971616500">+389 71 616 500</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 data-i18n="contact.hours.label">Работно време</h3>
+                        <p data-i18n="contact.hours.text">
+                            Понеделник - Четврток: 11:00 - 22:00<br>
+                            Петок - Сабота: 11:00 - 23:00<br>
+                            Недела: 12:00 - 21:00
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Instagram</h3>
+                        <p>
+                            <a href="https://www.instagram.com/15.za.12/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" class="contact-instagram">
+                                <span aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </span> @15za12
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.0923824008887!2d21.443804776462983!3d41.976826259226534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415b26bfd1207%3A0x3e9a3c5bcfa246e!2s15%20za%2012!5e0!3m2!1sen!2smk!4v1769045689901!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="tel:+38971616500" class="sticky-btn">
+            <span class="sticky-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </span>
+            <span data-i18n="cta.call.short">Повикај</span>
+        </a>
+        <a href="https://korpa.mk/partner/15-za-12" class="sticky-btn" target="_blank" rel="noopener noreferrer" aria-label="Order online via Korpa">
+            <span class="sticky-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </span>
+            <span data-i18n="cta.korpa.short">Korpa</span>
+        </a>
+        <a href="https://wolt.com/en/mkd/skopje/restaurant/15-za-12" class="sticky-btn" target="_blank" rel="noopener noreferrer" aria-label="Order online via Wolt">
+            <span class="sticky-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 3h5v5"></path>
+                    <path d="M8 3H3v5"></path>
+                    <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.828L4 3"></path>
+                    <path d="M12 22v-8.3a4 4 0 0 1 1.172-2.828L20 3"></path>
+                </svg>
+            </span>
+            <span data-i18n="cta.wolt.short">Wolt</span>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
