@@ -111,6 +111,7 @@
             'about.text1': 'Сервираме <strong>автентична неаполитанска пица</strong>, печена во нашата <strong>фурна на дрва</strong>. Лоцирани во срцето на Скопје, користиме свежо тесто направено со <strong>италијанско Caputo 00 брашно</strong> и квалитетни состојки за да ви го донесеме вистинскиот вкус на Неапол.',
             'about.text2': 'Ова е <strong>локално скопско место</strong>, не синџир. Се фокусираме на она што е важно: <strong>добра пица, направена на традиционален начин</strong>.',
             'gallery.title': 'Галерија',
+            'instagram.cta': 'Следете нè на Instagram',
             'contact.title': 'Локација и контакт',
             'contact.address.label': 'Адреса',
             'contact.address.text': 'Христо Татарчев 47ф, Скопје, Македонија',
@@ -217,7 +218,7 @@
             'about.text1': 'We serve <strong>authentic Neapolitan pizza</strong>, baked in our <strong>wood-fired oven</strong>. Located in the heart of Skopje, we use fresh dough made with <strong>Italian Caputo 00 flour</strong> and quality ingredients to bring you the true taste of Naples.',
             'about.text2': 'This is a <strong>local Skopje spot</strong>, not a chain. We focus on what matters: <strong>good pizza, made the traditional way</strong>.',
             'gallery.title': 'Gallery',
-            
+            'instagram.cta': 'Follow us on Instagram',
             'contact.title': 'Location & Contact',
             'contact.address.label': 'Address',
             'contact.address.text': 'Hristo Tatarchev 47f, Skopje, Macedonia',
@@ -596,6 +597,7 @@
     const menuToggles = document.querySelectorAll('.menu-toggle');
     const menuCategories = document.querySelectorAll('.menu-category');
     const menuHeaders = document.querySelectorAll('.menu-category-header');
+    let hasUserInteractedWithMenu = false;
 
     // Check if we're on mobile (using 768px as breakpoint, matching Tailwind 'md')
     function isMobile() {
@@ -607,6 +609,10 @@
         if (!isMobile()) {
             return;
         }
+
+        // Once the user has interacted with any category,
+        // we should no longer re-run the default-open logic on mobile.
+        hasUserInteractedWithMenu = true;
 
         const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
         
@@ -623,23 +629,27 @@
 
     function initializeMenuStates() {
         if (isMobile()) {
-            // Mobile: Only the first category (ПИЦИ — Наши креации) is expanded by default
-            // All others start collapsed
-            menuCategories.forEach((category, index) => {
-                const toggle = menuToggles[index];
-                
-                if (index === 0) {
-                    // First category: expanded
-                    category.classList.remove('collapsed');
-                    toggle.setAttribute('aria-expanded', 'true');
-                    toggle.textContent = '−';
-                } else {
-                    // All other categories: collapsed
-                    category.classList.add('collapsed');
-                    toggle.setAttribute('aria-expanded', 'false');
-                    toggle.textContent = '+';
-                }
-            });
+            // Mobile: Only apply the default-open logic once,
+            // before the user has interacted with the menu.
+            if (!hasUserInteractedWithMenu) {
+                // Mobile: Only the first category (ПИЦИ — Наши креации) is expanded by default
+                // All others start collapsed
+                menuCategories.forEach((category, index) => {
+                    const toggle = menuToggles[index];
+                    
+                    if (index === 0) {
+                        // First category: expanded
+                        category.classList.remove('collapsed');
+                        toggle.setAttribute('aria-expanded', 'true');
+                        toggle.textContent = '−';
+                    } else {
+                        // All other categories: collapsed
+                        category.classList.add('collapsed');
+                        toggle.setAttribute('aria-expanded', 'false');
+                        toggle.textContent = '+';
+                    }
+                });
+            }
         } else {
             // Desktop: All categories always visible (expanded)
             menuCategories.forEach((category, index) => {
@@ -675,6 +685,12 @@
     initializeMenuStates();
     setupMenuInteractions();
 
+    // Track whether the viewport was mobile or desktop to avoid
+    // re-running initialization on every small resize (like mobile
+    // address bar show/hide), while still updating when truly
+    // crossing the breakpoint.
+    let wasMobile = isMobile();
+
     // Handle window resize - update menu state when transitioning between mobile/desktop
     let resizeTimeout;
     window.addEventListener('resize', () => {
@@ -682,7 +698,15 @@
             clearTimeout(resizeTimeout);
         }
         resizeTimeout = setTimeout(() => {
-            initializeMenuStates();
+            const nowMobile = isMobile();
+
+            // Only re-initialize when crossing the breakpoint between
+            // mobile and desktop layouts. This prevents scroll-induced
+            // viewport height changes on mobile from resetting the menu.
+            if (nowMobile !== wasMobile) {
+                initializeMenuStates();
+                wasMobile = nowMobile;
+            }
         }, 100);
     });
 
