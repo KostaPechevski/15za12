@@ -2,6 +2,8 @@
 
 Single-page bilingual (MK / EN) marketing site for the pizzeria **15 za 12** in Skopje, focused on a clean presentation of the menu, location, and contact options.
 
+![Screenshot of the 15 za 12 landing page](screenshot.png)
+
 ## Features
 
 - **Bilingual content (MK / EN)** with a language toggle, driven by a small `translations` object in `main.js` and `data-i18n` attributes in the HTML.
